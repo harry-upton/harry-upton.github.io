@@ -1,0 +1,4 @@
+baseURL = 'https://harryupton.xyz'
+languageCode = 'en-us'
+title = 'harryupton.xyz'
+theme = 'lugo'
