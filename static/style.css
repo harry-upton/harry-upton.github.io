@@ -54,6 +54,16 @@ img {
 
 h1 {
 	text-align: center;
+	color: #00ADB5;
+}
+
+h2 {
+	text-align: center;
+	color: #EEEEEE;
+}
+
+ul {
+	text-align: left;
 	color: #EEEEEE;
 }
 
@@ -69,9 +79,9 @@ footer {
 }
 
 /* For NEXTPREV.HTML */
-#nextprev {
-	/* The container for both the previous and next articles. */
-}
+/* #nextprev {
+
+} */
 #prevart {
 	float: left ;
 	text-align: left ;
