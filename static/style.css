@@ -29,7 +29,12 @@ body {
 	margin-right: 15px;
 }
 
-.navbar a {
+.navbar a:link {
+	color: #EEEEEE;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+.navbar a:visited {
 	color: #EEEEEE;
 	text-decoration: none;
 	transition: color 0.3s;
@@ -46,6 +51,10 @@ p {
 main {
 	max-width: 800px ;
 	margin: auto ;
+}
+
+code {
+	color: #EF8354;
 }
 
 img {
@@ -70,6 +79,16 @@ ul {
 footer {
 	text-align: center ;
 	clear: both ;
+}
+
+/* unvisited link */
+a:link {
+	color: #6184d8;
+}
+
+/* visited link */
+a:visited {
+	color: #EE4266;
 }
 
 /* For TAGLIST.HTML */
