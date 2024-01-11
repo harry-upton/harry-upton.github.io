@@ -2,6 +2,7 @@
 title: "Microcontroller programming in WSL2"
 description: "A brief guide for how to setup microcontroller programming in WSL2."
 layout: single
+date: 2024-01-10
 ---
 
 ## Introduction
