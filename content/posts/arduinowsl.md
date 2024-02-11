@@ -35,7 +35,7 @@ Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
 
-If we navigate back to Windows and run `uspipd wsl list`, all of the USB devices connected to the Windows machine will be displayed, as well as their bus IDs and their connection status:
+If we navigate back to Windows and run `usbipd wsl list`, all of the USB devices connected to the Windows machine will be displayed, as well as their bus IDs and their connection status:
 
 ```
 BUSID  VID:PID    DEVICE  STATE
