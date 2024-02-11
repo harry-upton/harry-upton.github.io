@@ -57,8 +57,31 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 Showing we can now sucessfully access the USB device inside WSL. We are now ready to program the microcontroller, for example using the [Arduino CLI](https://arduino.github.io/arduino-cli) or [AVR Dude](https://github.com/avrdudes/avrdude)
 
+## Permissions with USB programmers
+
+An issue I encountered when using a USBasp programmer inside WSL was:
+
+```
+avrdude: error: could not find USB device with vid=0x16c0 pid=0x5dc vendor='www.fischl.de' product='USBasp'
+```
+
+Linux users may have this issue, or a similar one, when attempting to use a USB programmer as generally normal users do not have the necessary permissions to access USB devices.
+
+There are 2 potential fixes for this:
+
+- Run avrdude with `sudo` or as the root user with `su`.
+- Modify the _udev_ rules so that all Linux users can access the device.
+
+**To add udev rule for USBasp:**
+
+- Navigate to `/etc/udev/rules.d`
+- Create a new rule file: `usbasp.rules`
+- In the file, add a singular line: `SUBSYSTEMS=="usb", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="05dc", MODE=="0666"`
+- Restart the udev service with: `sudo /etc/init.d/udev restart`
+
 ## Useful Sites
 
 https://learn.microsoft.com/en-us/windows/wsl/connect-usb
 https://github.com/dorssel/usbipd-win/releases
 https://github.com/dorssel/usbipd-win/wiki/WSL-support#usbip-client-tools
+https://freetronics.com.au/pages/usbasp-icsp-programmer-quickstart-guide
