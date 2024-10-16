@@ -10,7 +10,7 @@ Hi, my name's Harry. Thanks for checking out my website.
 
 ## About me
 
-- 3rd Year Electronics Engineer (MEng) at the University of Warwick
+- 4th Year Electronics Engineer (MEng) at the University of Warwick
 - UKESF Scholar
 - Control Systems Engineer @ Warwick Racing
 
