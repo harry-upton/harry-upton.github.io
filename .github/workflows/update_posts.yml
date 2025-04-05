@@ -1,0 +1,30 @@
+name: Update Index Posts
+
+on:
+  push:
+    paths:
+      - 'content/posts/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Run update script
+      run: python static/update_posts.py
+
+    - name: Commit changes
+      run: |
+        git config --local user.name 'github-actions'
+        git config --local user.email 'github-actions@github.com'
+        git add content/_index.md
+        git commit -m 'Auto update posts on _index.md'
+        git push
