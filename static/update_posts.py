@@ -16,7 +16,8 @@ def createRecentPosts(addrPosts, content = '') -> str:
 
     for post in posts[:5]: # limited to 5 most recent posts
         title = post.replace('.md', '').replace('-', ' ').title()
-        link = f'{addrPostsShort}/{post}'
+        link_stub = post.replace('.md', '')
+        link = f'{addrPostsShort}/{link_stub}/'
         content += f'- [{title}]({link})\n'
     
     return content
